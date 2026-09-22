@@ -1,0 +1,11 @@
+[keafile]
+
+_START_
+name: "KeamsOS KeaFile",
+version: "0.1",
+
+_UPDATE_
+
+About: "KeaFile is a configuration file format for KeamsOS. It is designed to be simple, human-readable, and easy to parse. The format supports various data types, including strings, numbers, lists, and nested sections. KeaFiles can be used to configure applications, define settings, and store structured data."
+
+_END_

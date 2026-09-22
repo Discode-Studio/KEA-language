@@ -1,0 +1,117 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "KEA",
+    "scopeName": "source.kea",
+
+    "patterns": [
+        {
+            "include": "#header"
+        },
+        {
+            "include": "#entry-markers"
+        },
+        {
+            "include": "#strings"
+        },
+        {
+            "include": "#numbers"
+        },
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#functions"
+        },
+        {
+            "include": "#keys"
+        },
+        {
+            "include": "#operators"
+        }
+    ],
+
+    "repository": {
+        "header": {
+            "patterns": [
+                {
+                    "name": "keyword.control.kea",
+                    "match": "\\[keafile\\]"
+                }
+            ]
+        },
+
+        "entry-markers": {
+            "patterns": [
+                {
+                    "name": "keyword.control.kea",
+                    "match": "\\b(?:_ENTRY_|_START_|_UPDATE_|_END_)\\b"
+                }
+            ]
+        },
+
+        "strings": {
+            "name": "string.quoted.double.kea",
+            "begin": "\"",
+            "end": "\"",
+            "patterns": [
+                {
+                    "name": "constant.character.escape.kea",
+                    "match": "\\\\."
+                }
+            ]
+        },
+
+        "numbers": {
+            "patterns": [
+                {
+                    "name": "constant.numeric.kea",
+                    "match": "(?<![\\w.])-?\\d+(?:\\.\\d+)?(?:[eE][+-]?\\d+)?"
+                }
+            ]
+        },
+
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "constant.language.kea",
+                    "match": "\\b(?:true|false|null)\\b"
+                }
+            ]
+        },
+
+        "functions": {
+            "patterns": [
+                {
+                    "name": "support.function.kea",
+                    "match": "\\b(?:range|random|rr)(?=\\s*\\()"
+                }
+            ]
+        },
+
+        "keys": {
+            "patterns": [
+                {
+                    "name": "entity.name.tag.kea",
+                    "match": "\\b[A-Za-z_][A-Za-z0-9_]*(?=\\s*:)"
+                },
+                {
+                    "name": "entity.name.tag.kea",
+                    "match": "\"[^\"]+\"(?=\\s*:)"
+                }
+            ]
+        },
+
+        "operators": {
+            "patterns": [
+                {
+                    "name": "punctuation.separator.key-value.kea",
+                    "match": ":"
+                },
+                {
+                    "name": "punctuation.separator.kea",
+                    "match": "[,;]"
+                }
+            ]
+        }
+    }
+}

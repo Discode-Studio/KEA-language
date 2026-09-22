@@ -1,0 +1,40 @@
+{
+    "name": "kea-language",
+    "displayName": "KEA Language",
+    "description": "Syntax highlighting and language support for KEA files. KeaFile is the official library for KeamsOS, this extension work for the following file extensions: .kea, .keafile, .keams, .keaos",
+    "version": "0.1.0",
+    "publisher": "discodestudio",
+    "engines": {
+        "vscode": "^1.90.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "kea",
+                "aliases": [
+                    "KEA",
+                    "kea",
+                    "Keams",
+                    "keafile"
+                ],
+                "extensions": [
+                    ".kea",
+                    ".keafile",
+                    ".keams",
+                    ".keaos"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "kea",
+                "scopeName": "source.kea",
+                "path": "./syntaxes/kea.tmLanguage.json"
+            }
+        ]
+    }
+}

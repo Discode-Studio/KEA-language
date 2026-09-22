@@ -1,0 +1,9 @@
+[keafile]
+_ENTRY_
+Name: "Test File",
+Description: "This is a test KEA file for demonstration purposes.",
+Version: "0.1.0",
+
+Purpose: random(".kea", ".keaos", ".keams", ".keafile"),
+ExtensionForThisFile: ".keams"
+_END_
