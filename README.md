@@ -713,16 +713,16 @@ The goal is to keep KEA convenient to write without requiring excessive punctuat
 KEA files use:
 
 ```text
-.kea
+.kea, .keaos, .keams and .keafile
 ```
 
 Example:
 
 ```text
 config.kea
-settings.kea
-application.kea
-data.kea
+settings.keaos
+application.keams
+data.keafile
 ```
 
 The `[keafile]` header identifies the content as a KEA document regardless of the filename.
